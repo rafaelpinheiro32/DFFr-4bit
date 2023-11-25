@@ -6,12 +6,17 @@ module DFFr(d,clk,rst,q,qbar);
 input d, clk, rst; // inputs d, clock and reset
 output reg q, qbar; // outputs q and qbar
 
-always @ (posedge(clk), posedge(rst)) // always procedure at positive edge at clock or reset signals
-
-begin
-qbar = !q;
-if (rst == 1) q = 0; // if reset is high, q is 0
-else q = d; // if reset is low, q is d
+always @(posedge clk, posedge rst)
+  begin
+  if (rst) begin
+    // Async reset is active
+    q <= 1'b0;
+    qbar <= 1'b1;
+  end else begin
+    // Pos edge-triggered behavior
+    q <= d;
+    qbar <= ~d;
+  end
 end
 
 endmodule
