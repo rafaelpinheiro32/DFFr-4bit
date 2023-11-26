@@ -1,4 +1,6 @@
 `timescale 1ns / 1ps
+// ECE230 DP3 EX 1
+// testbench definition of D-type flip flop
 
 module DFFr_tb;
 reg D, CLK, RST;
