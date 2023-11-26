@@ -6,7 +6,7 @@ If reset signal is high, q is low and qbar is high, else q is d and qbar is ~d
 
 Testbench file tests its functionality.
 Image of waveform:
-![image](https://github.com/rafaelpinheiro32/DFFr-4bit/assets/151592512/0a352073-6462-45b9-adbf-107e94dfc7b6)
+![image](https://github.com/rafaelpinheiro32/DFFr-4bit/assets/151592512/d03dddd3-fff2-4e33-963b-a045a595bb20)
 
 (t=15) At positive clock edge, if d is high and reset is low, q is set to high.
 
